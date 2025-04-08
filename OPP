@@ -1,0 +1,61 @@
+class Smartphone:
+    def __init__(self, brand, model, color, storage, price):
+        self.brand = brand  # Brand of the smartphone
+        self.model = model  # Model of the smartphone
+        self.color = color  # Color of the smartphone
+        self.storage = storage  # Storage capacity in GB
+        self.price = price  # Price of the smartphone
+    
+    def display_info(self):
+        """Displays smartphone information."""
+        print(f"Smartphone Info:\nBrand: {self.brand}\nModel: {self.model}\nColor: {self.color}")
+        print(f"Storage: {self.storage}GB\nPrice: ${self.price}")
+    
+    def make_call(self, number):
+        """Simulate making a call."""
+        print(f"Calling {number}...")
+    
+    def send_message(self, number, message):
+        """Simulate sending a message."""
+        print(f"Sending message to {number}: {message}")
+    
+    def install_app(self, app_name):
+        """Simulate installing an app."""
+        print(f"Installing {app_name}...")
+
+# Creating an instance of the Smartphone class
+my_phone = Smartphone("Samsung", "Samsung s24", "Blue", 128, 999)
+my_phone.display_info()
+my_phone.make_call("0723786789")
+my_phone.send_message("0723786789", "Hello there!")
+my_phone.install_app("WhatsApp")
+
+
+
+
+class Vehicle:
+    def move(self):
+        pass  # Placeholder for the base class move method
+
+class Car(Vehicle):
+    def move(self):
+        print("Driving 🚗")
+
+class Plane(Vehicle):
+    def move(self):
+        print("Flying ✈️")
+
+class Bicycle(Vehicle):
+    def move(self):
+        print("Pedaling 🚲")
+
+# Creating instances of each class
+car = Car()
+plane = Plane()
+bicycle = Bicycle()
+
+# Each vehicle moves differently
+vehicles = [car, plane, bicycle]
+
+for vehicle in vehicles:
+    vehicle.move()  # Polymorphism in action
